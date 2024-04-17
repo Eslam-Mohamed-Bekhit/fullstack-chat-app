@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // تقديم الملفات الثابتة
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/', (req, res) => { res.sendFile("index.html") });
 io.on('connection', (socket) => {
     console.log('A user connected');
 
