@@ -16,7 +16,9 @@
             "dest": "/index.html"
         }
     ],
-    "engines": {
-        "node": "16.x"
+    "functions": {
+        "api": {
+            "runtime": "nodejs16.x"
+        }
     }
 }
