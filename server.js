@@ -14,6 +14,9 @@ const PORT = process.env.PORT || 3000;
 
 // تقديم الملفات الثابتة في الفولدر public
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // استماع لاحداث الاتصال بالسوكيت
 io.on('connection', (socket) => {
