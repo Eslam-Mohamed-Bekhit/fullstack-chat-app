@@ -10,9 +10,10 @@ const io = socketIO(server);
 const PORT = process.env.PORT || 3000;
 
 // تقديم الملفات الثابتة
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', (req, res) => { res.send("<p>some html</p>") });
 app.use('/api', (req, res) => { res.send("<p>some html from api</p>") });
+app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', (socket) => {
     console.log('A user connected');
 
