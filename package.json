@@ -6,7 +6,6 @@
   "engines": {
     "node": "16.x"
   },
-  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
