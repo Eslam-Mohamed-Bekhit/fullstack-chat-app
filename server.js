@@ -7,8 +7,12 @@ const path = require('path');
 // إنشاء تطبيق Express
 const app = express();
 const server = http.createServer(app);
-const io = socketIO(server);
-
+const io = require('socket.io')(server, {
+    cors: {
+        origin: '*',
+    },
+    transports: ['websocket'], // استخدم النقل websocket فقط
+});
 // تعيين منفذ الخادم
 const PORT = process.env.PORT || 3000;
 

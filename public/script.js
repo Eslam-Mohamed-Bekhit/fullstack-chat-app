@@ -9,7 +9,12 @@ let remoteVideo = document.getElementById('remoteVideo');
 startButton.addEventListener('click', startChat);
 stopButton.addEventListener('click', stopChat);
 
-let socket = io();
+// تأكد من استخدام wss بدلاً من ws إذا كنت تستخدم HTTPS
+let socket = io({
+    // استخدم wss بدلاً من ws إذا كنت تستخدم HTTPS
+    secure: true
+});
+
 
 async function startChat() {
     try {
