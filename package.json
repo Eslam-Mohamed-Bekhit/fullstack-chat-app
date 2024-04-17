@@ -6,9 +6,7 @@
   "engines": {
     "node": "16.x"
   },
-  "scripts": {
-    "build": "npm install && npm run build"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
