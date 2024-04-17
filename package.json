@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
-  "scripts": {
-    "build": "npm install"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {
