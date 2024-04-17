@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "./server.js",
-            "use": "@vercel/node"
+            "use": "@vercel/node@16.14.0"
         },
         {
             "src": "./public/**",
@@ -15,10 +15,5 @@
             "src": "/(.*)",
             "dest": "/index.html"
         }
-    ],
-    "functions": {
-        "api": {
-            "runtime": "nodejs16.x"
-        }
-    }
+    ]
 }
